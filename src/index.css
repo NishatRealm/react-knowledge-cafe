@@ -1,3 +1,12 @@
+/* Place the @import statement at the top of the file */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100;400;600;700;900&display=swap');
+
+/* Now add the Tailwind directives */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Additional custom styles */
+body {
+  font-family: "Exo 2", sans-serif;
+}
