@@ -28,8 +28,14 @@ const Blog = ({ blog,handleAddToBookmark,handleMarkAsread }) => {
                     hashtags.map((hash,idx) => <span key={idx}><a href="">{hash}</a></span>)
                 }
             </p>
-            <button onClick={() => handleMarkAsread(reading_time)}
-             className='text-purple-500 font-bold underline'>Mark as read</button>
+            
+            <button 
+                onClick={() => handleMarkAsread(blog.id, Number(reading_time))}
+                className='text-purple-500 font-bold underline'
+                >
+                Mark as read
+                </button>
+
         </div>
     );
 };
