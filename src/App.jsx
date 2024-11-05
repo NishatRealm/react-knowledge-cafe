@@ -6,9 +6,10 @@ import Bookmarks from './components/Bookmarks/Bookmarks';
 import { useState } from 'react';
 
 function App() {
-      const[bookmarks, setBookmars] = useState([]);
+      const[bookmarks, setBookMarks] = useState([]);
       const handleAddToBookmark = blog => {
-        console.log("added to bookmarks");
+        const newBookmark = [...bookmarks,blog];
+        setBookMarks(newBookmark);
       }
 
   return (
@@ -16,7 +17,7 @@ function App() {
       <Header></Header>
       <div className='md:flex max-w-7xl mx-auto'>
       <Blogs handleAddToBookmark={handleAddToBookmark}></Blogs>
-      <Bookmarks></Bookmarks>
+      <Bookmarks bookmarks={bookmarks}></Bookmarks>
       </div>
     </>
   )
